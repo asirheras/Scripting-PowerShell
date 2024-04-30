@@ -1,6 +1,6 @@
 ﻿Clear-Host
-$nombre = Read-Host ¿Cómo te llamas?
-$edad = Read-Host ¿Cuál es su edad?
+[string]$nombre = Read-Host ¿Cómo te llamas?
+[int]$edad = Read-Host ¿Cuál es su edad?
 if ($edad -ge 18){
 Write-Host "Eres mayor de edad"
 $pregunta=Read-Host "¿Quieres añadir algo?(S/N)?"

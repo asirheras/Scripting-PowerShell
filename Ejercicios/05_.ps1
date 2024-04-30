@@ -14,7 +14,7 @@ param (
 # Limpiamos pantalla
 Clear-Host
 
-# Verificar si se proporcionó la extensión
+# Verificar si se proporcionó una extensión
 if (-not $extension) {
     Write-Host "Debes proporcionar una extensión de archivo."
     exit

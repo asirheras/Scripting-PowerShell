@@ -1,15 +1,21 @@
 <#
-Escribir un script que reciba varios nombres de archivos de texto como parametros y
-los una en un solo archivo cuyo nombre sera la cadena resultado mas el nombre del
-script y la fecha y hora actual con una precision de hasta segundos. Todos los
-archivos estan en la carpeta Documents del perfil de usuario.
+<#
+Script:Variables de entorno
+Autor:Andrés Heras
+Fecha:2023016
+Descripción:Escribir un script que reciba varios nombres de archivos de texto como parámetros y
+            los una en un solo archivo cuyo nombre será la cadena resultado más el nombre del
+            script y la fecha y hora actual con una precisión de hasta segundos. Todos los
+            archivos están en la carpeta Documents del perfil de usuario.
+
+Ejemplo: 
+
+#Ejecuta en una ventana de PowerShell ".\Ejercicio6.ps1 hola mundo donde estas"
+
 #>
 
 Clear-Host
 
-#Ejecuta en una ventana de PowerShell ".\Ejercicio6.ps1 hola mundo donde estas"
-
-Clear-Host
 [string]$nombre_fichero
 [datetime] $fecha_hora = Get-Date
 [string]$script
@@ -36,6 +42,6 @@ if ( $args.Count -gt 0 ) {
     #Creamos el fichero en la carpeta Documentos del usuario
     New-Item -Path $home\Documents -Name $nombre_fichero -ItemType File -Force
 }
-Else{
+else{
     Write-Host "Debes introducir algun parametro"
 }
