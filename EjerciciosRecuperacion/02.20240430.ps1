@@ -2,41 +2,41 @@
 
 $estado = $args[0]
 <#
-1.Recibe un parámetro que puede ser uno de los siguientes: Ejecución, Parado. 
-Comprobar que se recibe el parámetro y que su valor es alguno de los admitidos. Si
-no fuera así, hay que terminar el script con un mensaje de error que muestre la
+1.Recibe un parametro que puede ser uno de los siguientes: Ejecucion, Parado. 
+Comprobar que se recibe el parametro y que su valor es alguno de los admitidos. Si
+no fuera asÃ­, hay que terminar el script con un mensaje de error que muestre la
 sintaxis del script.
 #> 
 
-if (-not ($estado -eq "Ejecución" -or $estado -eq "Parado")){
-    Write-Host "Sintaxis del script: script.ps1 <Ejecución|Parado>"
+if (-not ($estado -eq "Ejecucion" -or $estado -eq "Parado")){
+    Write-Host "Sintaxis del script: script.ps1 <Ejecucion|Parado>"
     exit
 }
 
 <#
 Realizar un listado de los servicios que se encuentran en el estado indicado por el
- parámetro pasado.
+ parametro pasado.
  #>
   
- if ($estado -eq "Ejecución") {
+ if ($estado -eq "Ejecucion") {
     $servicios = Get-Service | Where-Object { $_.Status -eq "Running"}
                              }
 else {
     $servicios = Get-Service | Where-Object { $_.Status -eq "Stopped" }
 }
  
- <#Para cada servicio habrá que hacer lo siguiente:
- a) Si está en ejecución y el servicio puede ser pausado y reanudado hay que
- mostrar la descripción del servicio.
+ <#Para cada servicio habra que hacer lo siguiente:
+ a) Si esta en ejecucion y el servicio puede ser pausado y reanudado hay que
+ mostrar la descripcion del servicio.
 
- b) Si está en ejecución y el servicio puede ser parado hay que mostrar los servicios
- que dependen de él.
- c) Si está parado hay que mostrar el tipo de inicio. En función del tipo de inicio hacer
+ b) Si esta en ejecucion y el servicio puede ser parado hay que mostrar los servicios
+ que dependen de el.
+ c) Si esta parado hay que mostrar el tipo de inicio. En funcion del tipo de inicio hacer
  lo siguiente:
-    • Si el tipo de inicio es manual hay que arrancar el servicio. Comprobar el
+    ï¿½ Si el tipo de inicio es manual hay que arrancar el servicio. Comprobar el
     arranque y mostrar un mensaje indicado si ha arrancado o no.
-    • Si es inicio retrasado mostrar el tipo de servicio.
-    • Si el servicio está deshabilitado mostrar el mensaje El servicio NOMBRE está
+    ï¿½ Si es inicio retrasado mostrar el tipo de servicio.
+    ï¿½ Si el servicio esta deshabilitado mostrar el mensaje El servicio NOMBRE esta
  deshabilitado.
 #>
 
@@ -52,13 +52,13 @@ $numServicios = 0
 foreach ($servicio in $servicios) {
     $numServicios++
 
-#a) Si está en ejecución y el servicio puede ser pausado y reanudado hay que mostrar la descripción del servicio.
+#a) Si esta en ejecucion y el servicio puede ser pausado y reanudado hay que mostrar la descripcion del servicio.
 
-    if ($estado -eq "Ejecución") {
+    if ($estado -eq "Ejecucion") {
         if ($servicio.CanPauseAndContinue) {
-            Write-Host "Descripción del servicio $($servicio.DisplayName): $($servicio.Description)"
+            Write-Host "Descripcion del servicio $($servicio.DisplayName): $($servicio.Description)"
 
-#b) Si está en ejecución y el servicio puede ser parado hay que mostrar los servicios que dependen de él.
+#b) Si esta en ejecucion y el servicio puede ser parado hay que mostrar los servicios que dependen de el.
 
         } elseif ($servicio.CanStop) {
             Write-Host "Servicios que dependen de $($servicio.DisplayName):"
