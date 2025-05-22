@@ -6,4 +6,4 @@ Aqui muestro todo lo que voy aprendiendo sobre Powershell y los scripts que util
 
 ## [Ejercicios hechos en el FGS](./2024-25/readme.md)
 
-## [Vagoredomado](./vagoredomado.md)
+## [Vagoredomado🥱](./vagoredomado.md)
