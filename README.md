@@ -1,8 +1,9 @@
 # Scripting-PowerShell
 
-Estas son las actividades que desarrollamos en la asignatura Scripting en Powershell
-<<<<<<< HEAD
+Aqui muestro todo lo que voy aprendiendo sobre Powershell y los scripts que utilizo para facilitar mi vida como Administrador de Sistemas
 
-=======
-[Ejercicios](./2024-25/readme.md)
->>>>>>> origin/main
+## [Curso de Powershell](./curso.md)
+
+## [Ejercicios hechos en el FGS](./2024-25/readme.md)
+
+## [Vagoredomado](./vagoredomado.md)

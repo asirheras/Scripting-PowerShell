@@ -4,20 +4,20 @@ $KeyPath = "$HOME\.ssh\id_rsa"
 # Verificar si el archivo de clave SSH ya existe
 if (Test-Path -Path $KeyPath) {
     # El archivo ya existe, preguntar al usuario si quiere sobrescribirlo
-    $overwrite = Read-Host "El archivo de clave SSH ya existe en la ruta: $KeyPath. ¿Desea sobrescribirlo? (Sí/No)"
+    $overwrite = Read-Host "El archivo de clave SSH ya existe en la ruta: $KeyPath. Â¿Desea sobrescribirlo? (SÃ­/No)"
 
-    # Convertir la respuesta a minúsculas para comparar
+    # Convertir la respuesta a minï¿½sculas para comparar
     $overwrite = $overwrite.ToLower()
 
-    if ($overwrite -ne "si" -and $overwrite -ne "sí") {
-        # Si la respuesta no es "sí", salir del script
+    if ($overwrite -ne "si" -and $overwrite -ne "SÃ­") {
+        # Si la respuesta no es "SÃ­", salir del script
         Write-Host "No se ha generado una nueva clave SSH."
         exit
     }
 }
 
-# Solicitar el correo electrónico al usuario
-$Email = Read-Host "Por favor, introduce tu correo electrónico (comentario para la clave SSH)"
+# Solicitar el correo electronico al usuario
+$Email = Read-Host "Por favor, introduce tu correo electronico (comentario para la clave SSH)"
 
 # Asegurarse de que el directorio .ssh exista
 $sshDir = [System.IO.Path]::GetDirectoryName($KeyPath)
@@ -38,9 +38,9 @@ if ($PSVersionTable.PSVersion.Major -ge 6) {
 
 Write-Host "Clave SSH generada exitosamente."
 
-# Añadir configuración al archivo de configuración SSH
-$vmName = Read-Host "Introduce el nombre de la máquina virtual"
-$vmIP = Read-Host "Introduce la dirección IP de la VM"
+# AÃ±adir configuraciÃ³n al archivo de configuraciÃ³n SSH
+$vmName = Read-Host "Introduce el nombre de la maquina virtual"
+$vmIP = Read-Host "Introduce la direccion IP de la VM"
 $vmUser = Read-Host "Introduce tu usuario en la VM"
 $ConfigPath = "$HOME\.ssh\config"
 
@@ -50,18 +50,18 @@ if (-not (Test-Path -Path $sshDir)) {
     New-Item -ItemType Directory -Path $sshDir -Force
 }
 
-# Crear la entrada de configuración
+# Crear la entrada de configuraciÃ³n
 $ConfigEntry = @"
 Host $vmName
   HostName $vmIP
   User $vmUser
 "@
 
-# Añadir la entrada al archivo de configuración
+# AÃ±adir la entrada al archivo de configuraciÃ³n
 if (Test-Path -Path $ConfigPath) {
     Add-Content -Path $ConfigPath -Value $ConfigEntry
 } else {
     $ConfigEntry | Out-File -FilePath $ConfigPath
 }
 
-Write-Host "Configuración de SSH actualizada en $ConfigPath"
+Write-Host "configuraciÃ³n de SSH actualizada en $ConfigPath"
