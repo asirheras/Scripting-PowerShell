@@ -19,27 +19,26 @@
 ======
 
 1.  [Introducción a PowerShell](#1)
-    
+
 2.  [Comandos Básicos y Navegación](#2)
-    
+
 3.  [Variables, Tipos y Operadores](#3)
-    
+
 4.  [Condicionales y Bucles](#4)
-    
+
 5.  [Funciones y Módulos](#5)
-    
+
 6.  [Trabajando con Archivos y Carpetas](#6)
-    
+
 7.  [Automatización y Tareas Programadas](#7)
-    
+
 8.  [Objetos y el Pipeline](#8)
-    
+
 9.  [Administración de Sistema con PowerShell](#9)
-    
+
 10.  [PowerShell Remoto y Seguridad](#10)
-    
+
 11.  [PowerShell Avanzado: .NET, APIs y Scripts Profesionales](#11)
-    
 
 * * *
 
