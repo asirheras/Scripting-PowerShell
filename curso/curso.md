@@ -57,3 +57,18 @@
     
 *   Diferencias entre PowerShell 5.1 y PowerShell 7+
     
+### 1.1. Shell, CMD, Powershell ... ¿que son?
+
+Una shell es una interfaz que te permite comunicarte con el sistema operativo escribiendo **comandos** (ordenes), es decir, es  como una especie de traductor entre tú y el núcleo del sistema operativo (SO). En Windows, encontramos dos tipos de shell:
+
+* el Símbolo de sistema ó CMD (cmd.exe): Fue la Shell por defecto durante décadas. Es muy limitada porque solo maneja texto, no soporta programación real ni integración con otras herramientas moderna, y además, no puede transformar la información facilmente.
+
+* Powershell
+  
+
+  | Shell          | Sistema         | Características principales                   |
+| -------------- | --------------- | --------------------------------------------- |
+| **CMD**        | Windows         | Muy básico, comandos simples                  |
+| **PowerShell** | Windows / cross | Basado en objetos, muy potente para admins    |
+| **Bash**       | Linux / macOS   | Muy usado en servidores, scripting clásico    |
+| **Zsh/Fish**   | Linux / macOS   | Alternativas modernas con más funcionalidades |
