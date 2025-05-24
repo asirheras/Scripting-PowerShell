@@ -61,12 +61,11 @@
 
 Una shell es una interfaz que te permite comunicarte con el sistema operativo escribiendo **comandos** (ordenes), es decir, es  como una especie de traductor entre tú y el núcleo del sistema operativo (SO). En Windows, encontramos dos tipos de shell:
 
-* el Símbolo de sistema ó CMD (cmd.exe): Fue la Shell por defecto durante décadas. Es muy limitada porque solo maneja texto, no soporta programación real ni integración con otras herramientas moderna, y además, no puede transformar la información facilmente.
+* **CMD (cmd.exe) ó Símbolo de sistema**: Fue la shell por defecto durante décadas. Se caracteriza por estar muy limitada, porque solo maneja texto, no soporta programación real ni integración con otras herramientas moderna, y además, no puede transformar la información facilmente.
 
-* Powershell
-  
+* **Powershell**: Evolución del CMD. Es una shell, pero además es un lenguaje de scripting muy potente, porque trabaja con objetos, y no solo texto. Además, soporta programación real ( funciones, bucles, condicionales, etc...) y se puede usar para automatizar tareas administrativas como gestionar servidores, redes, Active Directory, cloud, etc.
 
-  | Shell          | Sistema         | Características principales                   |
+| Shell          | Sistema         | Características principales                   |
 | -------------- | --------------- | --------------------------------------------- |
 | **CMD**        | Windows         | Muy básico, comandos simples                  |
 | **PowerShell** | Windows / cross | Basado en objetos, muy potente para admins    |
