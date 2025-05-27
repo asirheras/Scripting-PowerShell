@@ -65,6 +65,17 @@ Una shell es una interfaz que te permite comunicarte con el sistema operativo es
 
 * **Powershell**: Evolución del CMD. Es una shell, pero además es un lenguaje de scripting muy potente, porque trabaja con objetos, y no solo texto. Además, soporta programación real ( funciones, bucles, condicionales, etc...) y se puede usar para automatizar tareas administrativas como gestionar servidores, redes, Active Directory, cloud, etc.
   
+  ### Diferencias entre CMD y Powershell
+
+| CMD                             | PowerShell                                      |
+| ------------------------------- | ----------------------------------------------- |
+| Shell basada en texto           | Shell basada en **objetos .NET**                |
+| Muy limitada para scripting     | Soporta **funciones, módulos, condicionales**   |
+| Mal soporte para automatización | Alta capacidad de automatización                |
+| Casi sin extensiones modernas   | Integración con APIs REST, JSON, XML, WMI, etc. |
+| Difícil manejar datos           | Filtras, ordenas y transformas con facilidad    |
+
+### Otras shell
 
 | Shell          | Sistema         | Características principales                   |
 | -------------- | --------------- | --------------------------------------------- |
@@ -73,7 +84,8 @@ Una shell es una interfaz que te permite comunicarte con el sistema operativo es
 | **Bash**       | Linux / macOS   | Muy usado en servidores, scripting clásico    |
 | **Zsh/Fish**   | Linux / macOS   | Alternativas modernas con más funcionalidades |
 
- 1.2. ¿Qué son los CMDLETs?
+
+### 1.2. ¿Qué son los CMDLETs?
 
 Un Cmdlet (se pronuncia command-let) es un comando ligero de PowerShell, diseñado específicamente para tareas administrativas. Son `clases .NET` que ejecutan una única operación bien definida, y diferencia de comandos tradicionales (como en CMD o Bash), los cmdlets:
 
