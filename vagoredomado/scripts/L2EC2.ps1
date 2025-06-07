@@ -5,9 +5,9 @@
 <#Descripción: El script manda un archivo desde l máquina local a 
 la máquina remota (EC2)
 #>
-$keyPath    = "$HOME\.ssh\llave.pem"
+$keyPath    = "$HOME\.ssh\llaveAWS.pem"
 $remoteUser = "ubuntu"
-$remoteHost = "ec2-xx-xx-xx-xx.compute-1.amazonaws.com"
+$remoteHost = "ec2-34-227-60-134.compute-1.amazonaws.com"
 $remoteTmp  = "/home/$remoteUser"
 $localDir   = "C:\Scripts"
 $fileName   = "files.rar"

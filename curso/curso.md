@@ -34,7 +34,7 @@
 
 8. [Objetos y el Pipeline](#8)
 
-9.  [Administración de Sistema con PowerShell](#9)
+9. [Administración de Sistema con PowerShell](#9)
 
 10. [PowerShell Remoto y Seguridad](#10)
 
@@ -96,4 +96,6 @@ Un Cmdlet (se pronuncia command-let) es un comando ligero de PowerShell, diseña
 * Siguen la convención *Verbo-Sustantivo* (por ejemplo, Get-Process, Set-Date).
 
 ### 1.3. Kit de exploración de Powershell :`Get-Command`, `Get-Help`, `Get-Alias`
+
+Estos tres comandos serán tus tres herramientas para navegar, descubrir y personalizar comandos en Windows PowerShell
 
