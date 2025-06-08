@@ -17,9 +17,9 @@
 
 ## Índice
 
-1. [Introducción a PowerShell](#L46)
+1. [Introducción a PowerShell](#1)
 
-2. [Comandos Básicos y Navegación](#L101)
+2. [Comandos Básicos y Navegación](#2)
   
 3. [Variables, Tipos y Operadores](#3)
 
@@ -43,7 +43,7 @@
 
 <!-- Sección 1: Introducción a PowerShell -->
 
-### 1\. 🧭 Introducción a PowerShell
+### 1\. 🧭 Introducción a PowerShell {#1}
 
 
 > **Objetivo**: Comprender qué es PowerShell y cómo usarlo.
@@ -96,9 +96,44 @@ Un Cmdlet (se pronuncia command-let) es un comando ligero de PowerShell, diseña
 
 ### 1.3. Kit de exploración de Powershell :`Get-Command`, `Get-Help`, `Get-Alias`
 
-Para que tu exploración de PowerShell sea productiva y eficiente, necesitas conocer estás tres herramintas:`Get-Command`, `Get-Help`, `Get-Alias`. Con ellas, buscar y listar todos los cmdlets, funciones o aplicaciones disponibles; saber si existe un comando para cierta tarea; entender qué hace un cmdlet antes de ejecutarlo; aprender atajos, etc...
+Para que tu exploración de PowerShell sea productiva y eficiente, necesitas conocer estás tres herramintas:`Get-Command`, `Get-Help`, `Get-Alias`. Con ellas, podrás buscar y listar todos los cmdlets, funciones o aplicaciones disponibles; saber si existe un comando para cierta tarea; entender qué hace un cmdlet antes de ejecutarlo; aprender atajos, etc...
+
+* `Get-Command`
+  
+  Es tu mapa. Te muestra todos los “caminos”, es decir, busca y lista todos los cmdlets, funciones, scripts o ejecutables disponibles.
+  
+  
+  ````powershell
+
+  # Ver todos los caminos que empiecen por “Get-”
+
+  Get-Command -Name Get-*
+
+  # Buscar senderos relacionados con archivos
+
+  Get-Command -Noun File
+
+  ````
 
 
 
+### 2.OTRO SITIO {#2}
 
-### 2.OTRO SITIO
+### 3. Variables, Tipos y Operadores{#3}
+
+### 4. Condicionales y Bucles{#4}
+
+### 5. Funciones y Módulos{#5}
+
+### 6. Trabajando con Archivos y Carpetas{#6}
+
+### 7. Automatización y Tareas Programadas{#7}
+
+### 8. Objetos y el Pipeline{#8}
+
+### 9. Administración de Sistema con PowerShell{#9}
+
+### 10. PowerShell Remoto y Seguridad. {#10}
+
+### 11. PowerShell Avanzado: .NET, APIs y Scripts Profesionales{#11}
+
