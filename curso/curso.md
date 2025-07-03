@@ -100,21 +100,37 @@ Para que tu exploración de PowerShell sea productiva y eficiente, necesitas con
 
 * `Get-Command`
   
-  Es tu mapa. Te muestra todos los “caminos”, es decir, busca y lista todos los cmdlets, funciones, scripts o ejecutables disponibles.
-  
-  
-  ````powershell
+  Es tu mapa. Te muestra todos los “caminos”, es decir, busca y lista todos los cmdlets, funciones, scripts o ejecutables disponibles en tu entorno.
 
-  # Ver todos los caminos que empiecen por “Get-”
+* `Get-Help`
+  Es tu guía de campo:lo abres cuando la cosa se complica y necesitas saber exactamente cómo actuar. Te da la información completa: sintaxis, parámetros y ejemplos.
 
-  Get-Command -Name Get-*
+* `Get-Alias`
+  Te muestra o crea alias, atajos con nombres cortos para tus cmdlets favoritos. Es tu radio de emergencia:cada “botón” es un alias que dispara directamente el cmdlet que necesitas
+
+
+
+  
+  #### PREGUNTAS
+
+  
+<details>
+  <summary>¿Cómo ver todos los caminos que empiecen por <code>Get-</code>?</summary>
+
+````powershell
+
+    Get-Command -Name Get-*
+````
+
+</p>
+
+</details>
 
   # Buscar senderos relacionados con archivos
 
   Get-Command -Noun File
 
-  ````
-
+Ver todos los caminos que empiecen por “Get-”
 
 
 ### 2.OTRO SITIO {#2}
